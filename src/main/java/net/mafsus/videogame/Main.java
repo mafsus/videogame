@@ -26,8 +26,9 @@ public class Main {
             GLFW.glfwSwapBuffers(window);
 
 
-
             GLFW.glfwPollEvents();
+
+            Game.getGame().gameLoop();
 
         }
     }

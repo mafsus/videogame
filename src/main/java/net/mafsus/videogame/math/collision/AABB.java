@@ -37,6 +37,6 @@ public class AABB {
     }
 
     public boolean intersects(AABB other){
-        if(this)
+        return true;
     }
 }

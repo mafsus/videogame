@@ -21,9 +21,20 @@ public class Game {
     public void gameLoop(){
         if(!isInitialized) init();
         Tests.runContinuousTests();
+        renderLoop();
     }
 
-    public static Game createGame(){
+    void renderLoop(){
+
+    }
+
+    void logicLoop(){
+
+    }
+
+
+
+    public static Game getGame(){
         if(game!=null) return game;
         game = new Game();
         game.preinit();
