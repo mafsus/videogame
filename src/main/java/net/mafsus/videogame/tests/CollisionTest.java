@@ -9,6 +9,8 @@ public class CollisionTest implements ITest {
         AABB first = new AABB(new Vector2(-10,10),new Vector2(0,0));
         AABB second = new AABB(new Vector2(-5,5),new Vector2(5,-5));
         testCollision(first,second);
+        second = second.translate(new Vector2(15,15));
+        testCollision(second,first);
     }
 
     void testCollision(AABB a, AABB b){

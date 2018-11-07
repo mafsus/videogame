@@ -39,6 +39,17 @@ public class AABB {
         return Math.abs(topLeft.getX()-bottomRight.getX());
     }
 
+    public AABB translate(Vector2 trans){
+        return new AABB(getTopLeft().add(trans),getBottomRight().add(trans));
+    }
+
+    public AABB scale(float scaleFactor){
+        Vector2 center = getCenter();
+        return new AABB(getTopLeft().subtract(center).scale(scaleFactor).add(center),getBottomRight().subtract(center).scale(scaleFactor).add(center));
+    }
+
+
+
     public boolean intersects(AABB other){
         return (topLeft.getX()<other.bottomRight.getX()&&bottomRight.getX()>other.topLeft.getX()&&bottomRight.getY()<other.topLeft.getY()&&topLeft.getY()>bottomRight.getY());
     }
