@@ -7,6 +7,8 @@ public class Tests {
     static List<ITest> tests;
     static{
         tests = new ArrayList();
+
+        registerTest(new CollisionTest());
     }
     public static void registerTest(ITest test){
         tests.add(test);

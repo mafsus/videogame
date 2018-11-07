@@ -33,10 +33,21 @@ public class AABB {
     }
 
     public float getHeight(){
+        return Math.abs(topLeft.getY()-bottomRight.getY());
+    }
+    public float getWidth(){
         return Math.abs(topLeft.getX()-bottomRight.getX());
     }
 
     public boolean intersects(AABB other){
-        return true;
+        return (topLeft.getX()<other.bottomRight.getX()&&bottomRight.getX()>other.topLeft.getX()&&bottomRight.getY()<other.topLeft.getY()&&topLeft.getY()>bottomRight.getY());
+    }
+
+    @Override
+    public String toString() {
+        return "AABB{" +
+                "Top Left: " + topLeft +
+                ", Bottom Right: " + bottomRight +
+                '}';
     }
 }

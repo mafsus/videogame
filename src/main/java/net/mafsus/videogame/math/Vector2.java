@@ -39,6 +39,14 @@ public class Vector2 {
         return this.X*vec.X+this.Y*vec.Y;
     }
 
+    @Override
+    public String toString() {
+        return "Vector2{" +
+                "X: " + X +
+                ", Y: " + Y +
+                '}';
+    }
+
     public float getX() {
         return X;
     }
