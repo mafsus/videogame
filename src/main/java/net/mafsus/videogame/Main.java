@@ -1,8 +1,7 @@
 package net.mafsus.videogame;
 
-import org.lwjgl.*;
+import net.mafsus.videogame.tests.Tests;
 import org.lwjgl.glfw.GLFW;
-import org.lwjgl.glfw.Callbacks;
 import org.lwjgl.glfw.GLFWErrorCallback;
 import org.lwjgl.opengl.GL;
 import org.lwjgl.opengl.GL11;
@@ -54,7 +53,7 @@ public class Main {
 
     }
     public static void main(String[] args){
-        System.out.println("woohoo!");
+        Tests.runInitialTests();
         try{
             entry();
         }
